@@ -11,5 +11,5 @@ resource "aws_instance" "web" {
 }
 
 output "public_ip" {
-  value = "${aws_instance.web.public_ip}"
+  value = "${aws_instance.web.*.public_ip}"
 }
